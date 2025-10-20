@@ -2,92 +2,73 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+
 import bargiino from "@/public/bargiino.png";
 import gameHub from "@/public/game-hub.jpg";
 import fastPizza from "@/public/fast-pizza.png";
 
-export const links = [
-  {
-    name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
-] as const;
+export function getLinks(dict: any) {
+  return [
+    { name: dict.nav.home, hash: "#home" },
+    { name: dict.nav.about, hash: "#about" },
+    { name: dict.nav.projects, hash: "#projects" },
+    { name: dict.nav.skills, hash: "#skills" },
+    { name: dict.nav.experience, hash: "#experience" },
+    { name: dict.nav.contact, hash: "#contact" },
+  ] as const;
+}
 
-export const experiencesData = [
-  {
-    title: "Education",
-    location: "Iran",
-    description:
-      "Bachelor Of Science, Qom University of Technology - Computer Software Engineering",
-    icon: React.createElement(LuGraduationCap),
-    date: "2012 - 2016",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Iran, Tehran",
-    description:
-      "I worked as a full-stack developer for 2 years in 1 job at UNIQOSOFT. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2020 - 2022",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Iran",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, Laravel, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2022 - present",
-  },
-] as const;
+export function getExperiences(dict: any) {
+  return [
+    {
+      title: dict.experience.education.title,
+      location: dict.experience.education.location,
+      description: dict.experience.education.description,
+      icon: React.createElement(LuGraduationCap),
+      date: dict.experience.education.date,
+    },
+    {
+      title: dict.experience.uniqosoft.title,
+      location: dict.experience.uniqosoft.location,
+      description: dict.experience.uniqosoft.description,
+      icon: React.createElement(CgWorkAlt),
+      date: dict.experience.uniqosoft.date,
+    },
+    {
+      title: dict.experience.freelance.title,
+      location: dict.experience.freelance.location,
+      description: dict.experience.freelance.description,
+      icon: React.createElement(FaReact),
+      date: dict.experience.freelance.date,
+    },
+  ] as const;
+}
 
-export const projectsData = [
-  {
-    title: "Bargiino",
-    description:
-      "I've launched Bargino, a comprehensive platform for worksheets designed for students from first to sixth grade.",
-    tags: ["React", "Next.js", "Laravel", "Tailwind", "Zustand"],
-    imageUrl: bargiino,
-    link: "https://bargiino.ir",
-  },
-  {
-    title: "Game Hub",
-    description:
-      "I've developed Game Hub, a platform for discovering and browsing video games with search, filters, and infinite scroll.",
-
-    tags: ["React", "TypeScript", "Chakra-UI", "React Query", "Zustand"],
-    imageUrl: gameHub,
-    link: "https://game-hub-eta-bice.vercel.app",
-  },
-  {
-    title: "Fast Pizza",
-    description:
-      "Fast Pizza is a simple ordering app where users can customize their pizza orders, add priority, and track them easily—no login required!",
-
-    tags: ["React", "React Router", "Tailwind", "Redux"],
-    imageUrl: fastPizza,
-    link: "https://fast-react-pizza-rho-two.vercel.app",
-  },
-] as const;
+export function getProjects(dict: any) {
+  return [
+    {
+      title: dict.projects.bargiino.title,
+      description: dict.projects.bargiino.description,
+      tags: ["React", "Next.js", "Laravel", "Tailwind", "Zustand"],
+      imageUrl: bargiino,
+      link: "https://bargiino.ir",
+    },
+    {
+      title: dict.projects.gamehub.title,
+      description: dict.projects.gamehub.description,
+      tags: ["React", "TypeScript", "Chakra-UI", "React Query", "Zustand"],
+      imageUrl: gameHub,
+      link: "https://game-hub-eta-bice.vercel.app",
+    },
+    {
+      title: dict.projects.fastpizza.title,
+      description: dict.projects.fastpizza.description,
+      tags: ["React", "React Router", "Tailwind", "Redux"],
+      imageUrl: fastPizza,
+      link: "https://fast-react-pizza-rho-two.vercel.app",
+    },
+  ] as const;
+}
 
 export const skillsData = [
   "HTML",

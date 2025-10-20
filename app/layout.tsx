@@ -7,6 +7,8 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
+import { Local } from "@/i18n.config";
+import { getDictionary } from "@/lib/disctionary";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,13 +26,17 @@ export const metadata: Metadata = {
   description: "Alireza is a full-stack developer with 5 years of experience.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Local };
 }>) {
+  const dictionary = await getDictionary(params.lang);
+
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang={params.lang} className="!scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
@@ -38,7 +44,7 @@ export default function RootLayout({
         <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
+            <Header dictionary={dictionary} />
             {children}
             <Footer />
             <Toaster position="top-right" />

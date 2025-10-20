@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "intro": {
+    "title": "Hi, I'm Alireza. I'm a full-stack developer with 5 years of experience. I build websites and applications with a focus on React (Next.js)",
+    "contactButton": "Contact me here",
+    "downloadCv": "Download CV"
+  },
+  "about": {
+    "heading": "About me",
+    "paragraph1": "Since 2020, I've developed frontend projects using React and Next.js. My experience includes technical support (UNIQOSOFT) and CakePHP development. Currently, I'm focused on Bargiino, a comprehensive worksheet platform for elementary students (grades 1-6).",
+    "paragraph2": "My favorite part of programming is the problem-solving aspect. I love the feeling of finally figuring out a solution to a problem. My core stack is React, Next.js and Laravel. I am also familiar with TypeScript and Prisma. I am always looking to learn new technologies. I am currently looking for a full-time position as a software developer."
+  },
+  "experience": {
+    "education": {
+      "title": "Education",
+      "location": "Iran",
+      "description": "Bachelor Of Science, Qom University of Technology - Computer Software Engineering",
+      "date": "2012 - 2016"
+    },
+    "uniqosoft": {
+      "title": "Full-Stack Developer",
+      "location": "Iran, Tehran",
+      "description": "I worked as a full-stack developer for 2 years in 1 job at UNIQOSOFT. I also upskilled to the full stack.",
+      "date": "2020 - 2022"
+    },
+    "freelance": {
+      "title": "Full-Stack Developer",
+      "location": "Iran",
+      "description": "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, Laravel, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "date": "2022 - present"
+    }
+  },
+  "projects": {
+    "bargiino": {
+      "title": "Bargiino",
+      "description": "I've launched Bargiino, a comprehensive platform for worksheets designed for students from first to sixth grade."
+    },
+    "gamehub": {
+      "title": "Game Hub",
+      "description": "I've developed Game Hub, a platform for discovering and browsing video games with search, filters, and infinite scroll."
+    },
+    "fastpizza": {
+      "title": "Fast Pizza",
+      "description": "Fast Pizza is a simple ordering app where users can customize their pizza orders, add priority, and track them easily—no login required!"
+    }
+  }
+}
